@@ -1,0 +1,23 @@
+.createButton{
+    color: rgb(35, 154, 223);
+
+}
+.flex{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 20px;
+    height: 20px;
+    margin-top: 100px;
+    margin-left: 550px;
+}
+table{
+    margin: auto;
+    
+}
+table td{
+    padding: 10px;
+}

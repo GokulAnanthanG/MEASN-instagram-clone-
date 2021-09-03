@@ -1,0 +1,12 @@
+mat-dialog-content{
+    width:800px;
+    overflow: auto;
+}
+.img-wrapper{
+    width: 30%;
+    min-height: 100px;
+    margin: auto;
+ }
+ .menuIcon{
+     float: right;
+ }

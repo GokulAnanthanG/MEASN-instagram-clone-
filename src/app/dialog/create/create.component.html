@@ -1,0 +1,36 @@
+<mat-dialog-content><p align="center">Create Account</p>
+
+<mat-card>
+    <mat-card-content>
+        <form #formdata="ngForm">
+        <mat-form-field>
+            <input matInput placeholder="User Name" required autocomplete="off" ngModel name="userName"  type="text">
+        </mat-form-field>
+        <br> 
+        <mat-form-field>
+            <input matInput placeholder="Phone No" required autocomplete="off" name="phoneNo" ngModel type="text">
+        </mat-form-field>        <br> 
+        <mat-form-field>
+            <input matInput placeholder="Email" required autocomplete="off" name="email" ngModel type="text">
+        </mat-form-field><br> 
+        <mat-form-field>
+            <input matInput placeholder="Password" required autocomplete="off" name="password" ngModel type="password">
+        </mat-form-field><br> 
+        <mat-form-field>
+            <input matInput placeholder="Confirm Password" required autocomplete="off" name="confirmPassword" ngModel type="password">
+        </mat-form-field><br> 
+<mat-grid-list cols="2"  rowHeight="70px">
+    <mat-grid-tile>
+        <button (click)="formSubmit(formdata)" class="createButton"  color="primary" mat-button>Create</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button  (click)="openDialog2()"   mat-button>Already have an account ?</button>
+
+    </mat-grid-tile>
+</mat-grid-list>
+
+</form>
+    </mat-card-content>
+</mat-card>
+
+</mat-dialog-content>

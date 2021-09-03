@@ -1,0 +1,109 @@
+<div class="container">
+    <div class="container">
+    <div class="col-md-12">
+        <div class="col-md-6 first_six  ">
+            <img  class="img img-responsive img-thumbnail profile_icon" src="{{checkProfileimg(data.imgurl)}}" alt="">
+        </div>
+        <div class="col-md-6"><br><br>
+            <table>
+                <tr>
+                    <td> <span class="uName">{{data.userName}}</span>
+                    </td>
+                   
+                    <td>
+                        <button  mat-button (click)="followFolowingButtonClick(data.followers,data.following,data._id)" class="folowFollowingSatus">{{followFollowingTextStaus}}{{checkFollowFollowingStatus(data.followers,data.following,data._id,data.accountSatus)}}</button> 
+
+                    </td>
+                    <td><button mat-button (click)="startChat(data._id,data.userName)">Message</button></td>
+                </tr>
+            </table>
+       
+
+
+    <table>
+        <tr>
+            <td><span>{{dataSer.postLengthOfviewingProfile}} posts</span></td><button mat-button>{{data.followers.length}} followers</button><td></td> <td><button mat-button>{{data.following.length}} following</button></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+            
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+   
+    
+    <textarea readonly name="" id="" cols="30" rows="6">{{data.bio}}</textarea>
+ <br><a href="">&nbsp;<b>{{data.websiteUrl}}
+</b></a>
+        </div>
+    </div>
+</div>
+
+<div class="conatiner courosel">
+    <carousel [height]="cheight" [cellsToShow]="ccellsToShow" [cellWidth]='ccellWidth' [cellsToScroll]='ccellsToScroll'
+        [borderRadius]='cborderRadius'>
+      
+        <div class="carousel-cell">
+            <img src="assets/g1.png">
+        </div>
+        <div class="carousel-cell">
+            <img src="assets/g2.png">
+        </div>
+        <div class="carousel-cell">
+            <img src="assets/g2.png">
+        </div>
+        <div class="carousel-cell">
+            <img src="assets/g4.png">
+        </div>
+        <div class="carousel-cell">
+            <img src="assets/g5.jpg">
+        </div>
+        <div class="carousel-cell">
+            <img src="assets/g6.jpg">
+        </div>
+        <div class="carousel-cell">
+            <img class="img img-responsive img-rounded" src="assets/art1.jpg">
+        </div>
+        <div class="carousel-cell">
+            <img class="img-responsive" src="assets/art2.jpg">
+        </div>
+
+    </carousel>
+
+</div>
+<!--courosel--> <br><br>
+<mat-divider></mat-divider>
+&nbsp;
+<div class="buttons">
+    <span><button (click)="changeActive1()" [ngClass]="{ active:positive[0],offButton:negative[0] }" mat-button routerLink="/viewProfile/post"><mat-icon>apps</mat-icon></button></span>
+    <span><button (click)="changeActive2()" [ngClass]="{ active:positive[1],offButton:negative[1]  }" mat-button routerLink="/viewProfile/post"><mat-icon>live_tv</mat-icon></button></span>
+    <span><button (click)="changeActive3()"  [ngClass]="{ active:positive[2],offButton:negative[2]  }" mat-button routerLink="/viewProfile/post"><mat-icon>bookmark_outline</mat-icon></button></span>
+    <span><button (click)="changeActive4()"  [ngClass]="{ active:positive[3],offButton:negative[3]  }" mat-button routerLink="/viewProfile/post"><mat-icon>loyalty</mat-icon></button></span>
+</div><br>
+<!---->
+<div class="container">
+    <router-outlet></router-outlet></div>
+<!---->
+<mat-divider></mat-divider>
+<br>
+<div class="footerDiv">
+    <table class="secfooter">
+        <tr>
+            <td>About</td>
+            <td>Help</td>
+            <td>Terms</td>
+            <td>Privacy</td>
+            <td>TopAccounts</td>
+            <td>Location</td>
+            <td>Languuages</td>
+            <td>HashTages</td>
+            <td>API</td>
+        </tr>
+    </table>
+</div>
+<br>
+<p class="copyr" align="center">&copy; 2021 INSTAGRAM FROM GOKUL</p>
+
+</div>

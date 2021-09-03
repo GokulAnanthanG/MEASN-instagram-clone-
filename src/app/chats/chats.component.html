@@ -1,0 +1,25 @@
+
+<mat-card>
+    <mat-card-content>
+        <p align="center">{{data.userName}}</p>
+
+
+        <div class="wrapper" *ngFor="let followingData of followersArray">
+{{followersArray.userId}}
+
+            <mat-list >
+                <mat-list-item  (click)="startChat(followingData.userId,followingData.userName)">
+                    <img style="width: 50px;height: 50px;" mat-list-icon src="{{checkProfileimg(followingData.userImage)}}"
+                        alt="">
+                    <div mat-list-line>&nbsp;{{followingData.userName}}</div>
+                </mat-list-item>
+            </mat-list>
+            <mat-divider></mat-divider>
+
+
+
+        </div>
+ 
+
+</mat-card-content>
+</mat-card>

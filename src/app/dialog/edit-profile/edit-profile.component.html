@@ -1,0 +1,97 @@
+<mat-dialog-content>
+    <p align="center">Edit Profile</p>
+    <mat-card>
+        <mat-card-content>
+    <div class="wrapper">
+      <form action="" #formData="ngForm">
+      <mat-grid-list cols="2" rowHeight="100px">
+<mat-grid-tile>
+    <img src="{{checkProfileimg(data.imgurl)}}" class="img-responsive  img-rounded" alt="">
+</mat-grid-tile>
+
+<mat-grid-tile>
+    
+    <label matTooltip="change Profile Picture" for="img"><mat-icon>image</mat-icon></label>
+    <span>
+        {{fileName}}
+    </span>  <br><input type="file" (change)="fileChange($event)" name="image" ngModel style="visibility: hidden;" id="img">
+
+</mat-grid-tile>
+
+<mat-grid-tile>
+    <label for="">User Name</label>
+</mat-grid-tile>
+
+<mat-grid-tile>
+    <mat-form-field appearance="outline">
+        <input matInput type="text" [(ngModel)]="name" name="userName" id="">
+     </mat-form-field>
+</mat-grid-tile>
+
+<mat-grid-tile>
+   <label for=""> Website</label>
+</mat-grid-tile>
+
+<mat-grid-tile>
+     <mat-form-field appearance="outline">
+        <input matInput type="text" name="website" [(ngModel)]="website"  id="">
+     </mat-form-field>
+</mat-grid-tile>
+
+<mat-grid-tile>
+    <label for="">Bio</label>
+</mat-grid-tile>
+
+<mat-grid-tile>
+    <mat-form-field  appearance="outline">
+   <textarea matInput name="bio" [(ngModel)]="bio"  id="" cols="5" rows="3"></textarea>
+</mat-form-field>
+</mat-grid-tile>
+
+
+<mat-grid-tile><label for="">Email</label></mat-grid-tile>
+
+<mat-grid-tile>
+    <mat-form-field appearance="outline"> 
+        <input matInput type="text" name="email" [(ngModel)]="email"  id="">
+     </mat-form-field>
+</mat-grid-tile>
+
+
+<mat-grid-tile><label for="">Phone No</label></mat-grid-tile>
+<mat-grid-tile>
+    <mat-form-field appearance="outline">
+        <input matInput type="text" name="phoneNo" [(ngModel)]="phoneNo"  id="">
+     </mat-form-field>
+</mat-grid-tile>
+
+
+<mat-grid-tile><label for="">Gender</label></mat-grid-tile>
+<mat-grid-tile>
+    <mat-form-field appearance="outline">
+        <mat-select name="gender" [(ngModel)]="gender" >
+        <mat-option value="Male">
+            Male
+        </mat-option>
+        <mat-option value="Female">
+            Female
+        </mat-option>
+        <mat-option value="Others">
+            Others
+        </mat-option>
+    </mat-select>
+    </mat-form-field>
+</mat-grid-tile>
+
+
+<mat-grid-tile></mat-grid-tile>
+<mat-grid-tile><button (click)="submitForm(formData)" mat-raised-button>Submit</button></mat-grid-tile>
+
+     </mat-grid-list>
+
+<input type="hidden" [(ngModel)]="userId" name="userId" id="">
+    </form>
+    </div>
+</mat-card-content>
+</mat-card>
+ </mat-dialog-content>

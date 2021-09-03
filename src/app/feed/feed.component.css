@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+.storyCard{
+    width: 100%;
+    height:120px; 
+    font-family: 'Poppins', sans-serif;
+}
+carousel{
+    z-index: 0;
+}
+.carousel-cell{
+    border-radius: 100%;
+     border:3px solid rgb(168, 38, 99);
+}
+ 
+ .bookmarkicon{
+     margin-left: 320px;
+  }
+  .time{
+      opacity: 0.9;
+  }
+  
+   
+  .buttonF{
+    color: rgb(35, 154, 223);
+    font-weight:700px;
+ 
+  }
+  mat-form-field{
+    width: 100%;
+}
+.highlightUserName{
+font-weight: 500;
+}
+.heart{
+     color: red;
+}
+.heartBalck{
+    color: black;
+}
+.bookmark{
+    color:black;}
+

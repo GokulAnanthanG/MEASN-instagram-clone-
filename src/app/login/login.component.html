@@ -1,0 +1,20 @@
+<mat-dialog-content>
+<p align="center">Login</p>
+<form #formData="ngForm">
+<mat-form-field>
+    <input matInput required placeholder="Email" autocomplete="off" name="userName" ngModel type="text">
+</mat-form-field><br> 
+<mat-form-field>
+    <input matInput required placeholder="Password" autocomplete="off" name="password" ngModel type="password">
+</mat-form-field><br>
+
+<mat-grid-list cols="2"  rowHeight="70px">
+    <mat-grid-tile>
+        <button class="createButton" (click)="formSumit(formData)"  color="primary" mat-button>Login</button>    </mat-grid-tile>
+    <mat-grid-tile>
+        <button (click)="openDialog2()"   mat-button>Create an account ?</button>
+
+    </mat-grid-tile>
+</mat-grid-list>
+</form>
+</mat-dialog-content>

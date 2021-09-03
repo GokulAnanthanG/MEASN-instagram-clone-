@@ -1,0 +1,26 @@
+     <mat-dialog-content>
+        <div class="container">
+          <form #formData="ngForm">
+            <mat-grid-list cols="2" rowHeight="150px">
+                <mat-grid-tile>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Say something...</mat-label>
+                    <textarea matInput name="description" ngModel  id="" cols="40" rows="5"></textarea>
+                  </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                 <label matTooltip="select image/video" for="img"><mat-icon>image</mat-icon></label>   
+              <input    type="file" (change)="fileChange($event)"   style="display: none;" name="" id="img">
+            <span>{{fileName}}</span>    
+            </mat-grid-tile>
+                <mat-grid-tile>
+               
+                </mat-grid-tile>
+                <mat-grid-tile>
+                 <button (click)="formSubmit(formData)"  mat-button>Add Post</button>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </form>
+        </div>
+    </mat-dialog-content>
+ 

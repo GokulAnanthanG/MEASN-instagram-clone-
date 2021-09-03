@@ -1,0 +1,17 @@
+mat-card{
+    max-height: 550px;
+    overflow: auto;
+}
+p{
+    font-weight: 600;
+    font-family: sans-serif;
+}
+mat-list{
+    margin-top: 5px;
+}
+mat-divider{
+    margin-top: 3px;
+}
+mat-list{
+    cursor: pointer;
+}

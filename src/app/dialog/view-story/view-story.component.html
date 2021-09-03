@@ -1,0 +1,24 @@
+<mat-dialog-content>
+    <mat-list>
+        <mat-list-item (click)="viewProfile(data.userId)">
+            <img mat-list-icon src="{{checkProfileimg(data.userImg)}}" alt="">
+            <div mat-list-line>{{data.userName}}</div>
+        </mat-list-item>
+        </mat-list>
+<mat-card class="storyCard">
+    <mat-card-content>
+        <div class="conatiner">
+            <carousel [height]="cheight" [pauseOnHover]="pauseOnHover" [loop]='loop' [dots]='dots' [autoplay]='autoplay'  [cellWidth]='ccellWidth' [cellsToScroll]='ccellsToScroll'
+                [borderRadius]='cborderRadius' >
+           
+                <div class="carousel-cell" *ngFor="let story of storyArray">
+                    <img matTooltip="{{data.userName}} story" class="img img-responsive" src="{{story.postUrl}}">
+                </div>
+                 
+              
+            </carousel>
+
+        </div>
+    </mat-card-content>
+</mat-card>
+</mat-dialog-content>

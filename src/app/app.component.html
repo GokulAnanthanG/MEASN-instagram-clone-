@@ -1,0 +1,69 @@
+<div class="nav" *ngIf="dataSer.navStatus">
+    <div class="conatiner">
+        <div class="container">
+            <div class="container">
+                <div class="flex">
+                    <div class="flex1">
+                        <h1 class="logo">Instagram</h1>
+                    </div>
+                    <div class="flex2">
+ 
+                        <input (keyup)="search($event)"  type="search" 
+                        placeholder="Search" NgModel
+                         [matAutocomplete]="auto">
+                 <mat-autocomplete #auto="matAutocomplete"  [displayWith]="displayFn">
+                   <mat-option  *ngFor="let searchData of arraySeach" [value]="searchData" (click)="viewProfile(searchData._id)">
+               <img  class="profile" width="20px" height="20px" src="{{checkProfileimg(searchData.imgurl)}}" alt="">   {{searchData.userName}}
+                   </mat-option>
+                 </mat-autocomplete>
+                
+                    </div>
+                    <div class="flex3">
+                <span><button mat-icon-button [routerLink]="['/home',{
+                            outlets:{
+                                'first':['feed'],
+                                'second':['homeSide']
+                            }
+                        }]">
+                                <mat-icon>home</mat-icon>
+                            </button>&nbsp;<button mat-icon-button  [routerLink]="['/chat',{
+                                outlets:{
+                                    'chat':['chats'],
+                                    'chatBox':['empty']
+                                }
+                            }]">
+                            <i class="fa fa-telegram" aria-hidden="true"></i>
+                            </button>&nbsp;</span><span><button routerLink="/explore" mat-icon-button>
+                                <mat-icon>explore</mat-icon>
+                            </button>&nbsp;<button mat-icon-button>
+                                <mat-icon>favorite_border</mat-icon>
+                            </button>
+                            &nbsp;<button  [matMenuTriggerFor]="appmenu"   mat-icon-button>
+                               
+                                
+                                <mat-icon>                               <img class="img-responsive profile" src="{{checkProfileimg(userData.imgurl)}}" alt="profile">
+                                </mat-icon>
+
+                               
+                                <mat-menu #appmenu="matMenu">
+                                    <button  routerLink="/profile/post"   mat-menu-item><mat-icon>account_circle</mat-icon> Profile</button>
+                                    <button  (click)="openAddPostDialog()"   mat-menu-item><mat-icon>add_circle</mat-icon>Add POst</button>
+                                    <button   (click)="openAddStoryDialog()"     mat-menu-item><mat-icon>add_circle_outline</mat-icon> Add Story</button>
+                                    <button  (click)="logout()" mat-menu-item><mat-icon>Logout</mat-icon> LogOut</button>
+
+                                </mat-menu>
+                            </button>
+                       
+                        
+                        </span>
+                            
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br><br>
+<router-outlet></router-outlet>

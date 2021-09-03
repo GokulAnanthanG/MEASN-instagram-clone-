@@ -1,0 +1,67 @@
+<mat-card class="storyCard">
+    <mat-card-content>
+        <div class="conatiner">
+            <carousel [height]="cheight"   [cellWidth]='ccellWidth' [cellsToScroll]='ccellsToScroll'
+                [borderRadius]='cborderRadius' >
+            
+                <div class="carousel-cell">
+                    <img matTooltip="My Story" (click)="viewStory(data._id,data.imgurl,data.userName)"  class="img img-responsive" src="{{data.imgurl}}">
+                </div>
+                 
+                    <div class="carousel-cell" *ngFor="let storyData of storyArray">
+                        <img matTooltip="{{storyData.userName}}" (click)="viewStory(storyData.userId,storyData.imgurl,storyData.userName)" class="img img-responsive" src="{{checkProfileimg(storyData.imgurl)}}">
+                    </div>
+                  
+            </carousel>
+
+        </div>
+    </mat-card-content>
+</mat-card>
+<br> 
+<div class="feed" *ngFor="let feed of feeds;let i=index">
+     
+    <mat-card>
+        <mat-card-content>
+            <mat-list>
+                <mat-list-item (click)="viewProfile(feed.userid)">
+                    <img mat-list-icon src="{{checkProfileimg(feed.imgurl)}}" alt="">
+                    <div mat-list-line>{{feed.userName}}</div>
+                </mat-list-item>
+            </mat-list>
+            <img width="100%" height="200px" class="img-responsive" src="{{feed.postUrl}}" alt="">            <div class="post_icon">
+                <span><button mat-icon-button (click)="addLike(i,feed.likes,feed._id)">
+                        <mat-icon  [ngClass]="{heart:style[i],heartBalck:style1[i]}">{{checkLike(i,feed.likes)}}</mat-icon>
+                    </button></span>
+                <span><button mat-icon-button>
+                        <mat-icon>share</mat-icon>
+                    </button></span>
+                <span><button matTooltip="View Comment" (click)="viewComment(feed._id)" mat-icon-button>
+                        <mat-icon>comment</mat-icon>
+                    </button></span>
+                <span class="bookmarkicon"><button  mat-icon-button (click)="addSave(feed._id,i)">
+                        <mat-icon>{{bookmark[i]}} {{checkBookMark(i,feed._id)}}</mat-icon>
+                    </button></span>
+            </div><br>
+            <b>{{feed.userName}}</b>&nbsp;<span>{{feed.caption}}</span><br>
+            <span class="time" matTooltip="{{feed.date}}">{{feed.addedTime}}</span><br><br>
+            <span (click)="viewComment(feed._id)">view all {{feed.comment.length}} comments</span>
+<br>
+ 
+            <mat-grid-list cols="2" rowHeight="50px">
+                <mat-grid-tile>
+                    <mat-form-field>
+                        <mat-label>
+                            Add comment...
+                        </mat-label>
+                        <input matInput class="comment_box" [ngModel]="commentBox" (keyup)="typingComment($event)"  type="text" name="" id=""> 
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile> <button (click)="addComment(feed._id,feed.comment)" class="buttonF"   mat-button>Post</button></mat-grid-tile>
+            </mat-grid-list><br>
+            <mat-divider></mat-divider>
+        </mat-card-content>
+    </mat-card>
+    <!--feed-->
+    </div>
+
+ 

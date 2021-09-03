@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+.second_half mat-card{
+    height: 550px;
+}
+.suggest{
+    opacity: 0.9;
+}
+.buttonF{
+    color: rgb(35, 154, 223);
+    font-weight:700px;
+    margin-left: 200px;
+}
+.prfileLogo{
+   height: 45px;
+   padding-left: 35px;
+}
+.suggestProfile{
+   height: 55px;
+}
+.table1 td{
+   padding-left: 48px;  
+}
+.t1btn{
+   margin-left: 148px;  
+}
+mat-list{
+   font-family: 'Poppins', sans-serif;
+
+}
+table{
+   max-height:300px ;
+}
+ table td{
+    padding-left: 15px;
+ }
+ .secfooter td{
+     opacity: 0.6;
+     cursor: pointer;
+ }
+ .copyr{
+   opacity: 0.6;
+ }
+ mat-list{
+    cursor: pointer;
+ }
+

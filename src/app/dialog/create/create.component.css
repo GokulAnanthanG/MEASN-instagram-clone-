@@ -1,0 +1,10 @@
+mat-dialog-content{
+    width: 450px;
+}
+mat-form-field{
+    width: 100%;
+}
+.createButton{
+    color: rgb(35, 154, 223);
+
+}

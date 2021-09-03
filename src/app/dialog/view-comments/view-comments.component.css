@@ -1,0 +1,9 @@
+mat-dialog-content{
+    width:800px;
+    overflow: auto;
+}
+.img-wrapper{
+    width: 10%;
+    max-height: 100px;
+    margin: auto;
+ }

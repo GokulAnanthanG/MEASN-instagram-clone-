@@ -1,0 +1,69 @@
+.profile_icon{
+    border-radius: 100%;
+}
+.container{
+    padding: 20px;
+}
+.first_six img{
+    width:200px;
+     height:200px;
+    margin-left: 200px;
+}
+.uName{
+    font-size: 20px;
+}
+table  {
+    margin-left: 15px;
+}
+.status{
+    width: 300px;
+    padding-left: 8px;
+}
+carousel{
+    z-index: 0;
+}
+.courosel{
+    width: 800px;
+    margin: auto;
+}
+.carousel-cell{
+    border-radius: 100%;
+     border:3px solid rgb(168, 38, 99);
+}
+.carousel-cell img{
+    border-radius: 100%;
+ }
+ .buttons{
+     width: 270px;
+     margin: auto;
+ }
+  .offButton{
+     color: rgb(190, 184, 184);
+ }
+ .active{
+     border-radius: 0%;
+     color: rgb(0, 0, 0);
+     border-top: 2px solid black;
+    
+ }
+ table td{
+    padding-left:6px;
+ }
+ .footerDiv{
+     width: 500px;
+     height: 20px;
+     margin: auto;
+ }
+
+ .secfooter td{
+    opacity: 0.6;
+    cursor: pointer;
+}
+.copyr{
+  opacity: 0.6;
+}
+textarea{
+    border: none;
+    outline: none;
+    padding: 10px;overflow:hidden;
+}

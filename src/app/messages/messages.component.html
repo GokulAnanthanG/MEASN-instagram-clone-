@@ -1,0 +1,26 @@
+<div class="chatBox">
+<mat-card>
+    <mat-card-content>
+ <h2 align="center">{{chatterName}}</h2>
+
+ <p align="center" *ngIf="chatData.length==0"><br>No conversation Yet <br>LEt's ChAT TOgethEr</p>
+
+ <div class="chats">
+    <div   *ngFor="let chat of chatData,let i=index">
+        <br>
+        <div [ngClass]={opponentChat:style2[i],myChat:style[i]}>
+            {{checkStyle(chat.sendedBy,i)}}{{chat.message}}
+        </div>
+      
+         </div>
+ </div>
+
+      
+    </mat-card-content>
+    
+</mat-card>
+<div class="input">
+    <input type="text" name="" [(ngModel)]="message" id="">
+<button (click)="sendMessage()" mat-icon-button><mat-icon>send</mat-icon></button>
+</div> 
+</div>

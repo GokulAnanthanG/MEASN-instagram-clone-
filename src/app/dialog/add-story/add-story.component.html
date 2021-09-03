@@ -1,0 +1,17 @@
+<mat-dialog-content>
+    <div class="container">
+        <mat-grid-list cols="2" rowHeight="100px">
+            
+            <mat-grid-tile>
+                <label matTooltip="select image/video" for="img"><mat-icon>image</mat-icon></label> <br>  
+                <input    type="file" (change)="fileChange($event)"  style="display: none;" name="" id="img">
+                <span>{{fileName}}</span>   
+            </mat-grid-tile>
+            <mat-grid-tile>
+             <button mat-button (click)="addStory()">Add Story</button>
+          </mat-grid-tile>
+
+        </mat-grid-list>
+       
+    </div>
+</mat-dialog-content>

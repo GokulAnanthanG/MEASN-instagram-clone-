@@ -1,0 +1,62 @@
+<mat-card>
+    <mat-card-content>
+
+
+        <mat-list class="prfileLogo">
+            <mat-list-item>
+                <img style="width: 80px;height: 80px;" mat-list-icon src="{{checkProfileimg(data.imgurl)}}" alt="">
+                <div mat-list-line>&nbsp;{{data.userName}}</div>
+            </mat-list-item>
+        </mat-list>
+        <br>  &nbsp;  &nbsp;  <br>
+        <mat-divider style="margin-top: 14px;"></mat-divider>
+        <br>&nbsp;
+
+        <table class="table1">
+            <tr>
+                <td>
+                    <p class="suggest">Suggestions For You</p>
+                </td>
+
+                <td  > <button class="t1btn" mat-button>see all</button></td>
+            </tr>
+        </table>
+
+
+
+        <table *ngFor="let data of suggestData">
+            <tr>
+                <td>
+                    <mat-list (click)="viewProfile(data._id)">
+                        <mat-list-item>
+                            <img style="width: 50px;height: 50px;" mat-list-icon src="{{checkProfileimg(data.imgurl)}}"
+                                alt="">
+                            <div mat-list-line>&nbsp;{{data.userName}}</div>
+                        </mat-list-item>
+                    </mat-list>
+                </td>
+                <td class="secTd"> <button (click)="viewProfile(data._id)" class="buttonF" color="primary" mat-button>Follow</button></td>
+            </tr>      
+        </table>
+
+        <br><br>
+        <table class="secfooter">
+            <tr>
+                <td>About</td>
+                <td>Help</td>
+                <td>Terms</td>
+                <td>Privacy</td>
+                <td>TopAccounts</td>
+                <td>Location</td>
+                <td>Languuages</td>
+                <td>HashTages</td>
+                <td>API</td>
+            </tr>
+        </table>
+        <br>
+        <p class="copyr" align="center">&copy; 2021 INSTAGRAM FROM GOKUL</p>
+    </mat-card-content>
+
+</mat-card>
+
+ 

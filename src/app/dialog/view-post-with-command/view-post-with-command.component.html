@@ -1,0 +1,28 @@
+<mat-dialog-content>
+    <button class="menuIcon"  [matMenuTriggerFor]="appmenu"   mat-icon-button>
+        <mat-icon>more_vert</mat-icon>
+        <mat-menu #appmenu="matMenu">
+            <button mat-button (click)="deletePost(postData._id)"><mat-icon>delete</mat-icon></button>
+        </mat-menu>
+    </button>
+    <div class="img-wrapper"> 
+        <img width="100%" height="100%" src="{{postData.postUrl}}" class="img-responsive" alt=""> 
+       
+    </div>
+    <br>
+    <p>{{postData.caption}}</p>
+    <br><br>
+
+<mat-divider></mat-divider>
+<div *ngFor="let comment of comment">
+    <mat-list >
+        <mat-list-item>
+            <img style="width: 50px;height: 50px;" mat-list-icon src="{{checkProfileimg(comment.imgurl)}}"
+                alt="">
+            <div mat-list-line>&nbsp;<b>{{comment.userName}}</b></div>
+            <div mat-list-line>&nbsp;{{comment.comment}}</div>
+        </mat-list-item>
+    </mat-list> 
+</div>
+</mat-dialog-content>
+

@@ -1,0 +1,8 @@
+ <div class="container">
+<p align="center" *ngIf="feeds.length==0"></p>
+    <mat-grid-list cols="4" rowHeight="200px" >
+    <mat-grid-tile *ngFor="let data of feeds">
+         <img (click)="viewComment(data._id)"  matTooltip="{{data.likes.length}} Likes {{data.comment.length}} comment" class="img img-responsive img-thumbnail" src="{{data.postUrl}}" alt="">
+      </mat-grid-tile>
+ </mat-grid-list>
+ </div>

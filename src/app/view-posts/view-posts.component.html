@@ -1,0 +1,10 @@
+<p  align="center" *ngIf="postLength">No PosTS YeT</p>
+
+<div class="container">
+    <mat-grid-list cols="4" rowHeight="200px" >
+        <mat-grid-tile *ngFor="let data of data">
+          <img matTooltip="{{data.likes.length}} like {{data.comment.length}} comments"  class="img w img-responsive img-thumbnail" src="{{data.postUrl}}" alt="">
+        </mat-grid-tile>
+         
+    </mat-grid-list>
+  </div>
